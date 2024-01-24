@@ -42,7 +42,7 @@ target_link_libraries(${CLI_NAME}
 	PRIVATE ${LIB_NAME}
 )
 target_link_libraries(${TEST_NAME}
-	PRIVATE ${LIB_NAME} ${GTEST_BOTH_LIBRARIES}
+	PRIVATE ${LIB_NAME} ${GTEST_BOTH_LIBRARIES} gtest gtest_main
 )
 
 if (MSVC)
@@ -66,6 +66,12 @@ else ()
 		PRIVATE -Wall -Wextra -pedantic -Werror
 	)
 endif()
+
+# Build googletest
+if (MSVC)
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/googletest)
+endif()
+
 
 # Install
 include(GNUInstallDirs)
