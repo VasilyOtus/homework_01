@@ -4,7 +4,7 @@ set(PATCH_VERSION "1" CACHE STRING "Patch version")
 
 project(helloworld VERSION 0.0.${PATCH_VERSION})
 
-find_package(GTest REQUIRED)
+find_package(GTest)
 
 set(SOURCES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(HEADERS_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
