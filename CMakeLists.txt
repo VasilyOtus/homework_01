@@ -46,6 +46,9 @@ target_link_libraries(${TEST_NAME}
 )
 
 if (MSVC)
+	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+
 	target_compile_options(${LIB_NAME}
 		PRIVATE /W4
 	)

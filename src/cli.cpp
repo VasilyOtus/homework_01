@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdint>
+#include <string>
 
 #include "lib.h"
 
