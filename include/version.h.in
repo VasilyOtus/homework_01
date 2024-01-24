@@ -1,0 +1,6 @@
+#ifndef _VERSION_H
+#define _VERSION_H
+
+#cmakedefine PROJECT_VERSION	((@PROJECT_VERSION_MAJOR@ << 16) + (@PROJECT_VERSION_MINOR@ << 8) + @PROJECT_VERSION_PATCH@)
+
+#endif /* _VERSION_H */
